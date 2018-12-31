@@ -6,8 +6,6 @@ const state = {
 
 const mutations = {
   [SET_LOGIN](currentState, login) {
-    // eslint-disable-next-line no-console
-    console.log('OURRRAAA : ', login);
     state.login = login;
   },
 };

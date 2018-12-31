@@ -1,9 +1,12 @@
 <template lang="pug">
-  div Welcome to the admin Dashboard {{ login }} !
+  el-row(:span=12 class="center")
+    el-col(:span=24)
+      el-button(type="primary"  @click="createProgram") Create a new Program
 
 </template>
 
 <script>
+import router from '@/router';
 import { mapGetters } from 'vuex';
 
 export default {
@@ -17,10 +20,19 @@ export default {
     ...mapGetters(['login']),
   },
   methods: {
+    createProgram() {
+      this.$notify({
+        title: 'It works!',
+        type: 'success',
+        message: 'The login will be available soon!',
+        duration: 5000,
+      });
+      this.$store.dispatch('setLogin', this.login);
+      router.push('/program-edit');
+    },
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 </style>
