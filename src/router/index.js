@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Login from '@/components/Login';
 import Dashboard from '@/components/Dashboard';
+import ProgramEdit from '@/components/ProgramEdit';
 
 Vue.use(Router);
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: Dashboard,
+    },
+    {
+      path: '/program-edit',
+      name: 'program-edit',
+      component: ProgramEdit,
     },
   ],
 });
