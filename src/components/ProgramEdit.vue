@@ -29,7 +29,7 @@ import { mapGetters } from 'vuex';
 import resource from '@/resource';
 
 export default {
-  name: 'program-create',
+  name: 'program-edit',
   data() {
     return {
       program: {
