@@ -20,7 +20,7 @@ import router from '@/router';
 import { mapActions } from 'vuex';
 
 export default {
-  name: 'Login',
+  name: 'login',
   data() {
     return {
       login: '',

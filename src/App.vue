@@ -1,8 +1,7 @@
-<template>
-  <div id="app">
-    <img id="logo" src="./assets/logo.png">
-    <router-view/>
-  </div>
+<template lang="pug">
+  div#app
+    transition(name="fade")
+      router-view
 </template>
 
 <script>

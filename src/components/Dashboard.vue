@@ -10,10 +10,9 @@ import router from '@/router';
 import { mapGetters } from 'vuex';
 
 export default {
-  name: 'Dashboard',
+  name: 'dashboard',
   data() {
     return {
-      test: '',
     };
   },
   computed: {
