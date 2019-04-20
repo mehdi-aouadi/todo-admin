@@ -1,5 +1,5 @@
 <template lang="pug">
-  div Welcome to the program creation board {{ login }} !
+  div
     el-row &nbsp
     el-row
       el-col(:span="6") &nbsp

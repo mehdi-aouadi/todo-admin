@@ -20,13 +20,6 @@ export default {
   },
   methods: {
     createProgram() {
-      this.$notify({
-        title: 'It works!',
-        type: 'success',
-        message: 'The login will be available soon!',
-        duration: 5000,
-      });
-      this.$store.dispatch('setLogin', this.login);
       router.push('/program-edit');
     },
   },
