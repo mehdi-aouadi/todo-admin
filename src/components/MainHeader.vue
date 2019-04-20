@@ -1,11 +1,21 @@
 <template lang="pug">
   header.todo-header
     el-row(type="flex", justify="end", align="middle")
-      el-col.todo-header__toolbar.md-primary(:span="24")
+      el-col.todo-header__toolbar.md-primary(:span="20")
         img.todo-header__logo(src="/static/images/wellness.svg", valt="ToDo")
+      el-col.t2s-cc-header__actions(:span="4")
+        el-dropdown(@command="userActions")
+          span.el-dropdown-link actions
+            i.el-icon-caret-bottom.el-icon--right
+          el-dropdown-menu(slot="dropdown")
+            el-dropdown-item(command="profile") {{ ('Edit profile') }}
+            el-dropdown-item(command="logout") {{('Logout')}}
+            el-dropdown-item(command="help") {{('Help')}}
 </template>
 
 <script>
+
+import { mapActions } from 'vuex';
 
 export default {
   name: 'main-header',
@@ -14,6 +24,16 @@ export default {
   computed: {
   },
   methods: {
+    ...mapActions(['logout']),
+    userActions(command) {
+      switch (command) {
+        case 'logout':
+          this.logout();
+          break;
+        default:
+          this.$router.push('/');
+      }
+    },
   },
 };
 </script>

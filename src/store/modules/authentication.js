@@ -1,23 +1,34 @@
-import SET_LOGIN from '../mutation-types';
+import _ from 'lodash';
+import router from '@/router';
+import * as types from '../mutation-types';
 
 const state = {
-  login: null,
+  user: null,
 };
 
 const mutations = {
-  [SET_LOGIN](currentState, login) {
-    state.login = login;
+  [types.SET_LOGIN](user) {
+    state.user = user;
+  },
+  [types.LOGOUT]() {
+    state.user = null;
+    router.push('/login');
+    location.reload();
   },
 };
 
 const actions = {
-  setLogin({ commit }, login) {
-    commit(SET_LOGIN, login);
+  setLogin({ commit }, user) {
+    commit(types.SET_LOGIN, user);
+  },
+  logout({ commit }) {
+    commit(types.LOGOUT);
   },
 };
 
 const getters = {
-  login: currentState => currentState.login,
+  login: currentState => currentState.user,
+  logged: currentState => !_.isNull(currentState.user),
 };
 
 export default {

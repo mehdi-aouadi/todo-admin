@@ -9,7 +9,7 @@
         el-input(placeholder="password" type="password" clearable)
     el-row(:span=12 class="center")
       el-col(:span=24)
-        el-button(type="primary"  @click="startHacking" style="width: 100px;") Login
+        el-button(type="primary" @click="submitLogin" style="width: 100px;") Login
     el-row(:span=12 class="center")
       el-col(:span=24)
         el-button(type="primary" style="width: 100px;") New User
@@ -26,20 +26,11 @@ export default {
       login: '',
     };
   },
-  /*   computed: {
-    ...mapGetters(['login']),
-  }, */
   methods: {
     ...mapActions(['setLogin']),
-    startHacking() {
-      this.$notify({
-        title: 'It works!',
-        type: 'success',
-        message: 'The login will be available soon!',
-        duration: 5000,
-      });
-      this.$store.dispatch('setLogin', this.login);
-      router.push('/dashboard');
+    submitLogin() {
+      this.setLogin(this.login);
+      router.push('/');
     },
   },
 };
