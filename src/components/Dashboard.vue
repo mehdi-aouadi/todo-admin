@@ -1,13 +1,12 @@
 <template lang="pug">
-  el-row(:span=12 class="center")
-    el-col(:span=24)
-      el-button(type="primary"  @click="createProgram") Create a new Program
+  el-row(:span="12" class="center")
+    el-col(:span="24")
+      el-button(type="primary"  @click="createProgram") {{ $t('create program') }}
 
 </template>
 
 <script>
 import router from '@/router';
-import { mapGetters } from 'vuex';
 
 export default {
   name: 'dashboard',
@@ -16,7 +15,6 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['login']),
   },
   methods: {
     createProgram() {

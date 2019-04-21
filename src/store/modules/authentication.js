@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import _ from 'lodash';
 import router from '@/router';
 import * as types from '../mutation-types';
@@ -7,10 +8,10 @@ const state = {
 };
 
 const mutations = {
-  [types.SET_LOGIN](user) {
+  [types.SET_LOGIN](state, user) {
     state.user = user;
   },
-  [types.LOGOUT]() {
+  [types.LOGOUT](state) {
     state.user = null;
     router.push('/login');
     location.reload();
@@ -27,8 +28,8 @@ const actions = {
 };
 
 const getters = {
-  login: currentState => currentState.user,
-  logged: currentState => !_.isNull(currentState.user),
+  userName: state => state.user,
+  logged: state => !_.isNull(state.user),
 };
 
 export default {
