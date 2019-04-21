@@ -24,7 +24,6 @@
 </template>
 
 <script>
-// import _ from 'lodash';
 import { mapGetters } from 'vuex';
 import resource from '@/resource';
 
@@ -43,6 +42,10 @@ export default {
   },
   computed: {
     ...mapGetters(['login']),
+  },
+  mounted() {
+    // eslint-disable-next-line
+    console.log('mounted')
   },
   methods: {
     addTask() {

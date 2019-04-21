@@ -13,6 +13,7 @@ export default {
   password: 'Password',
   'sign in': 'Sign In',
   'sign up': 'Sign Up',
+  lastModificationDate: 'Last modification date',
   // PROGRAMS
   programs: 'Programs',
   'create program': 'Create a new Program',
@@ -24,4 +25,7 @@ export default {
   'task description': 'Task Description',
   tasks: 'Tasks',
   medias: 'Medias',
+  // ITEM LIST
+  name: 'Name',
+  'last modification date': 'Last modification date',
 };

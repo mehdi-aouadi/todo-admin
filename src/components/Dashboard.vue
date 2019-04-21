@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     createProgram() {
-      router.push('/program-edit');
+      router.push('add a new program');
     },
   },
 };

@@ -9,7 +9,7 @@ Vue.use(Resource);
 
 export default {
   set(path, params) {
-    this.resource = Vue.resource(`${path}`, params);
+    this.resource = Vue.resource(`http://localhost:8080/todo-web/todo/${path}`, params);
   },
   handleStatus(error) {
     let errorMessage = '';

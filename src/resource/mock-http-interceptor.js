@@ -1,4 +1,3 @@
-// Mode bouchonné
 import Vue from 'vue';
 import VueResource from 'vue-resource';
 import _ from 'lodash';
