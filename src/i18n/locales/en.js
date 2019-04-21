@@ -6,4 +6,10 @@ export default {
   ...enHelp,
   // GLOBALS
   welcome: 'Welcome {user}',
+  help: 'Help',
+  // PROGRAMS
+  programs: 'Programs',
+  'create program': 'Create a new Program',
+  tasks: 'Tasks',
+  medias: 'Medias',
 };

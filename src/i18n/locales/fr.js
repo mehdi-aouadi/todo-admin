@@ -5,5 +5,11 @@ export default {
   ...frLocale,
   ...frHelp,
   // GLOBALS
-  welcome: 'Bienvenue {user}',
+  welcome: 'Welcome {user}',
+  help: 'Aide',
+  // PROGRAMS
+  programs: 'Programmes',
+  'create program': 'Créer un nouveau Programme',
+  tasks: 'Tâches',
+  medias: 'Medias',
 };
