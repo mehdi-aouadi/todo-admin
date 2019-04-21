@@ -5,23 +5,24 @@
         img.todo-header__logo(src="/static/images/wellness.svg", valt="ToDo")
       el-col.t2s-cc-header__actions(:span="4")
         el-dropdown(@command="userActions")
-          span.el-dropdown-link actions
+          span.el-dropdown-link {{ userName }}
             i.el-icon-caret-bottom.el-icon--right
           el-dropdown-menu(slot="dropdown")
-            el-dropdown-item(command="profile") {{ ('Edit profile') }}
-            el-dropdown-item(command="logout") {{('Logout')}}
-            el-dropdown-item(command="help") {{('Help')}}
+            el-dropdown-item(command="profile") {{ $t('edit profile') }}
+            el-dropdown-item(command="logout") {{ $t('logout')}}
+            el-dropdown-item(command="help") {{ $t('help')}}
 </template>
 
 <script>
 
-import { mapActions } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'main-header',
   mounted() {
   },
   computed: {
+    ...mapGetters(['userName']),
   },
   methods: {
     ...mapActions(['logout']),

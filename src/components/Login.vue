@@ -6,16 +6,16 @@
         img.logo(src="/static/images/wellness.svg", valt="ToDo")
     el-row(:span="12" class="center")
       el-col(:span="24")
-          el-input(placeholder="Login" v-model="login" clearable)
+          el-input(:placeholder="$t('login')" v-model="login" clearable)
     el-row(:span="12" class="center")
       el-col(:span="24")
-        el-input(placeholder="password" type="password" clearable)
+        el-input(:placeholder="$t('password')" type="password" clearable)
     el-row(:span="12" class="center")
       el-col(:span="24")
-        el-button(type="primary" @click="submitLogin" style="width: 100px;") Login
+        el-button(type="primary" @click="submitLogin" style="width: 100px;") {{ $t('sign in') }}
     el-row(:span="12" class="center")
       el-col(:span="24")
-        el-button(type="primary" style="width: 100px;") New User
+        el-button(type="primary" style="width: 100px;") {{ $t('sign up') }}
 </template>
 
 <script>

@@ -5,18 +5,18 @@
       el-col(:span="6") &nbsp
       el-col(:span="12")
         el-form(label-width="120px")
-          el-form-item(label="Name")
+          el-form-item(:label="$t('program name')")
             el-input(v-model="program.name")
-          el-form-item(label="Description")
+          el-form-item(:label="$t('program description')")
             el-input(type="textarea" v-model="program.desciption")
-          el-form-item(label="Introduction")
+          el-form-item(:label="$t('program introduction')")
             el-input(type="textarea" v-model="program.introduction")
-          el-form-item(label="Tasks")
+          el-form-item(:label="$t('program tasks')")
             el-button(type="primary" @click="addTask") Add a new task
           el-row(v-for="task, index in program.tasks" :key="index")
-            el-form-item(label="Name")
+            el-form-item(:label="$t('task name')")
               el-input(v-model="task.name")
-            el-form-item(label="Description")
+            el-form-item(:label="$t('task description')")
               el-input(type="textarea" v-model="task.description")
           el-button(type="primary" @click="saveProgram") Save Program
       el-col(:span="6") &nbsp

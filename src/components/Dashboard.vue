@@ -7,7 +7,6 @@
 
 <script>
 import router from '@/router';
-import { mapGetters } from 'vuex';
 
 export default {
   name: 'dashboard',
@@ -16,7 +15,6 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['login']),
   },
   methods: {
     createProgram() {
