@@ -2,19 +2,10 @@ export default {
   dashboard: {
     icon: 'fa-home',
   },
-  'manage programs': {
+  'programs dashboard': {
     icon: 'fa-line-chart',
     children: [
-      'medias',
-      'tasks',
       'programs',
-    ],
-  },
-  'manage users': {
-    icon: 'fa-tag',
-    children: [
-      'users',
-      'admin users',
     ],
   },
 };

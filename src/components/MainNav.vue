@@ -66,7 +66,7 @@ export default {
   },
   mounted() {
     document.addEventListener('click', (evt) => {
-      if (!evt.target.closest('.todo-cc-main-nav')) {
+      if (!evt.target.closest('.todo-main-nav')) {
         this.currentSubNav = null;
       }
     });

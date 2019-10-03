@@ -8,6 +8,7 @@ import RouterGuard from './router-guard';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
