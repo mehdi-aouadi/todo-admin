@@ -1,12 +1,12 @@
 <template lang="pug">
-  section.t2s-cc-content
+  section.todo-content
     content-header(
       :content-title="$t($route.name)",
       :button-route-name="newProgramRouteNAme",
       :search-function="true",
       display-type="list"
     )
-    div.t2s-cc-main-content
+    div.todo-main-content
       item-list(
         :headers="headers",
         :items="programList",
