@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     createProgram() {
-      router.push('add a new program');
+      router.push({ name: 'add a new program' });
     },
   },
 };
