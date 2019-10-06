@@ -16,7 +16,7 @@ export default {
   lastModificationDate: 'Last modification date',
   // PROGRAMS
   programs: 'Programs',
-  'create program': 'Create a new Program',
+  'add a new program': 'Add a new Program',
   'program name': 'Name',
   'program description': 'Description',
   'program introduction': 'Introduction',

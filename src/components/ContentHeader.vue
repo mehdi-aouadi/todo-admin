@@ -1,6 +1,6 @@
 <template lang="pug">
-div.todo-cc-content-header(:class="{'list-type': displayType === 'list'}")
-  div.todo-cc-content-header__breadcrumb
+div.todo-content-header(:class="{'list-type': displayType === 'list'}")
+  div.todo-content-header__breadcrumb
     el-breadcrumb(separator="")
       el-breadcrumb-item(:to="{ name: 'dashboard' }")
         i.fa.fa-home
@@ -16,30 +16,30 @@ div.todo-cc-content-header(:class="{'list-type': displayType === 'list'}")
         :to="{ name: item.meta.breadcrumb }",
         v-if="!item.meta.hasOwnProperty('breadcrumbNoLink')"
       ) {{ $t(item.meta.breadcrumb) }}
-  header.todo-cc-content-header__container
-    el-row.todo-cc-content-header__content(type="flex", justify="space-between", align="center")
-      div.todo-cc-content-header__title
+  header.todo-content-header__container
+    el-row.todo-content-header__content(type="flex", justify="space-between", align="center")
+      div.todo-content-header__title
         h1 {{ contentTitle }}
-      div.todo-cc-content-header__actions
-        div.todo-cc-content-header__add-button(v-if="buttonRouteName")
+      div.todo-content-header__actions
+        div.todo-content-header__add-button(v-if="buttonRouteName")
           el-button#navigateToButton.header-button(
             type="warning",
             @click="navigateTo"
             ) {{$t(buttonRouteName)}}
             i.el-icon-plus.el-icon-right
-        div.todo-cc-content-header__add-button(v-if="addNewContent")
+        div.todo-content-header__add-button(v-if="addNewContent")
           el-button#addContentButton.header-button(
             type="warning",
             @click="addNewContent") {{$t(addNewContentLabel)}}
             i.el-icon-plus.el-icon-right
-        div.todo-cc-content-header__save-button(v-if="saveAction")
-          el-button#headerCancel.header-button.todo-cc-separator.todo-cc-separator--append(
+        div.todo-content-header__save-button(v-if="saveAction")
+          el-button#headerCancel.header-button.todo-separator.todo-separator--append(
             type="text",
             @click="cancel",
             size="small",
             v-if="!noCancel") {{ $t('cancel') }}
             i.el-icon-close.el-icon-right
-          el-button#headerCancel.header-button.todo-cc-separator.todo-cc-separator--append(
+          el-button#headerCancel.header-button.todo-separator.todo-separator--append(
             type="text",
             @click="returnToDashboard",
             size="small",
@@ -50,7 +50,7 @@ div.todo-cc-content-header(:class="{'list-type': displayType === 'list'}")
             @click="saveAction",
             icon="check",
             :disabled="disabledSave") {{$t('save')}}
-        div.todo-cc-content-header__search(v-if="searchFunction", @click="deploySearch")
+        div.todo-content-header__search(v-if="searchFunction", @click="deploySearch")
           el-input#search.header-input(
             type="text",
             v-model="query",
@@ -126,11 +126,6 @@ export default {
       this.searchPlaceholder = '';
     },
     cancel() {
-      this.$ga.event({
-        eventCategory: 'Cancel',
-        eventAction: 'Cancel',
-        eventLabel: 'CANCEL',
-      });
       this.$router.go(-1);
     },
     returnToDashboard() {
@@ -159,7 +154,7 @@ export default {
 <style lang="scss">
   @import '../sass/utils';
 
-  .todo-cc-content-header {
+  .todo-content-header {
     &__breadcrumb {
       padding: pxtoem(10);
     }

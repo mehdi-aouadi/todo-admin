@@ -3,7 +3,7 @@ export default {
     icon: 'fa-home',
   },
   'programs dashboard': {
-    icon: 'fa-line-chart',
+    icon: 'fa-calendar',
     children: [
       'programs',
     ],
