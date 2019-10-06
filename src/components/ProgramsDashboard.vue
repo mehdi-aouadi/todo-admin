@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.t2s-cc-pages
+  div.todo-pages
     transition(name="fade")
       router-view
 </template>

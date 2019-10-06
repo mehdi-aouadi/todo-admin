@@ -3,7 +3,7 @@
     el-row(type="flex", justify="end", align="middle")
       el-col.todo-header__toolbar.md-primary(:span="20")
         img.todo-header__logo(src="/static/images/wellness.svg", valt="ToDo")
-      el-col.t2s-cc-header__actions(:span="4")
+      el-col.todo-header__actions(:span="4")
         el-dropdown(@command="userActions")
           span.el-dropdown-link {{ userName }}
             i.el-icon-caret-bottom.el-icon--right

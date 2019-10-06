@@ -1,7 +1,7 @@
 <template lang="pug">
   el-row(:span="12" class="center")
     el-col(:span="24")
-      el-button(type="primary"  @click="createProgram") {{ $t('create program') }}
+      el-button(type="primary"  @click="createProgram") {{ $t('add a new program') }}
 
 </template>
 
