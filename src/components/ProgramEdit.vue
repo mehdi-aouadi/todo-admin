@@ -2,14 +2,14 @@
   section.todo-content
     content-header(
       :content-title="$t($route.name)"
-      save-action=true
+      :save-action="saveProgram"
     )
     div
       el-row &nbsp
       el-row
         el-col(:span="6") &nbsp
         el-col(:span="12")
-          el-form(label-width="120px")
+          el-form(label-width="120px", :model="program")
             el-form-item(:label="$t('program name')")
               el-input(v-model="program.name")
             el-form-item(:label="$t('program description')")
@@ -18,7 +18,7 @@
               el-input(type="textarea" v-model="program.introduction")
             el-form-item(:label="$t('program tasks')")
               el-button(type="primary" @click="addTask") Add a new task
-            el-row(v-for="task, index in program.tasks" :key="index")
+            el-row(v-for="task, index in program.taskList" :key="index")
               el-form-item(:label="$t('task name')")
                 el-input(v-model="task.name")
               el-form-item(:label="$t('task description')")
@@ -40,10 +40,10 @@ export default {
     return {
       program: {
         name: '',
-        period: {},
         description: '',
         introduction: '',
-        tasks: [],
+        duration: {},
+        taskList: [],
       },
     };
   },
@@ -52,10 +52,10 @@ export default {
   },
   methods: {
     addTask() {
-      this.program.tasks.push({});
+      this.program.taskList.push({});
     },
     saveProgram() {
-      resource.set('http://localhost:8080/todo-web/todo/program/template');
+      resource.set('program/');
       resource.save({}, this.program);
     },
   },
