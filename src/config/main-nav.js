@@ -8,4 +8,10 @@ export default {
       'programs',
     ],
   },
+  'media dashboard': {
+    icon: 'fa-photo',
+    children: [
+      'medias',
+    ],
+  },
 };
