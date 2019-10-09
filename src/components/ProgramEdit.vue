@@ -38,17 +38,10 @@ export default {
   },
   data() {
     return {
-      program: {
-        name: '',
-        description: '',
-        introduction: '',
-        duration: {},
-        taskList: [],
-      },
     };
   },
   computed: {
-    ...mapGetters(['login']),
+    ...mapGetters(['program']),
   },
   methods: {
     addTask() {
