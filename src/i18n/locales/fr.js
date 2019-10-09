@@ -13,8 +13,10 @@ export default {
   password: 'Mot de passe',
   'sign in': 'Se connecter',
   'sign up': 'Créer un compte',
+  dashboard: 'Tableau de board',
   // PROGRAMS
   programs: 'Programmes',
+  'programs dashboard': 'Tableau de board des programmes',
   'create program': 'Créer un nouveau Programme',
   'program name': 'Nom',
   'program description': 'Description',
@@ -23,5 +25,8 @@ export default {
   'task name': 'Nom de la Tâchee',
   'task description': 'Description de la Tâche',
   tasks: 'Tâches',
+  // MEDIAS
+  'medias dashboard': 'Tableau de board des Medias',
   medias: 'Medias',
+  'add a new media': 'Ajouter un nouveau Media',
 };
