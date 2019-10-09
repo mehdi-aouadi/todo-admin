@@ -1,7 +1,11 @@
 <template lang="pug">
-  el-row(:span="12" class="center")
-    el-col(:span="24")
-      el-button(type="primary"  @click="createProgram") {{ $t('add a new program') }}
+  section.todo-content
+    el-row(:span="12" class="center")
+      el-col(:span="24")
+        el-button(type="primary"  @click="createProgram") {{ $t('add a new program') }}
+    el-row(:span="12" class="center")
+      el-col(:span="24")
+        el-button(type="primary"  @click="createMedia") {{ $t('add a new media') }}
 
 </template>
 
@@ -19,6 +23,9 @@ export default {
   methods: {
     createProgram() {
       router.push({ name: 'add a new program' });
+    },
+    createMedia() {
+      router.push({ name: 'add a new media' });
     },
   },
 };

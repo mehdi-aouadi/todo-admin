@@ -14,6 +14,8 @@ export default {
   'sign in': 'Se connecter',
   'sign up': 'Créer un compte',
   dashboard: 'Tableau de board',
+  cancel: 'Annuler',
+  save: 'Save',
   // PROGRAMS
   programs: 'Programmes',
   'programs dashboard': 'Tableau de board des programmes',
@@ -29,4 +31,7 @@ export default {
   'medias dashboard': 'Tableau de board des Medias',
   medias: 'Medias',
   'add a new media': 'Ajouter un nouveau Media',
+  'media name': 'Nom du media',
+  'media type': 'Type du media',
+  'media resource': 'Resource du media',
 };

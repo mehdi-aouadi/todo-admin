@@ -15,6 +15,8 @@ export default {
   'sign up': 'Sign Up',
   lastModificationDate: 'Last modification date',
   dashboard: 'Dashboard',
+  cancel: 'Cancel',
+  save: 'Sauvegarder',
   // PROGRAMS
   programs: 'Programs',
   'programs dashboard': 'Programs Dashboard',
@@ -30,6 +32,9 @@ export default {
   'medias dashboard': 'Medias Dashboard',
   medias: 'Medias',
   'add a new media': 'Add a new Media',
+  'media name': 'Media name',
+  'media type': 'Media type',
+  'media resource': 'Media resource',
   // ITEM LIST
   name: 'Name',
   'last modification date': 'Last modification date',
