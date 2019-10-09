@@ -2,7 +2,7 @@
   section.todo-content
     content-header(
       :content-title="$t($route.name)",
-      :button-route-name="newProgramRouteNAme",
+      :button-route-name="newProgramRouteName",
       :search-function="true",
       display-type="list"
     )
@@ -23,12 +23,9 @@ export default {
     ItemList,
     ContentHeader,
   },
-  created() {
-    // this.setProgramList({ range: '0-9' });
-  },
   data() {
     return {
-      newProgramRouteNAme: 'add a new program',
+      newProgramRouteName: 'add a new program',
       headers: [
         { label: 'name' },
         { label: 'lastModificationDate' },
