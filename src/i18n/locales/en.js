@@ -13,10 +13,9 @@ export default {
   password: 'Password',
   'sign in': 'Sign In',
   'sign up': 'Sign Up',
-  lastModificationDate: 'Last modification date',
   dashboard: 'Dashboard',
   cancel: 'Cancel',
-  save: 'Sauvegarder',
+  save: 'Save',
   // PROGRAMS
   programs: 'Programs',
   'programs dashboard': 'Programs Dashboard',
@@ -37,5 +36,6 @@ export default {
   'media resource': 'Media resource',
   // ITEM LIST
   name: 'Name',
-  'last modification date': 'Last modification date',
+  lastModificationDate: 'Last modification date',
+  creationDate: 'Creation date',
 };
