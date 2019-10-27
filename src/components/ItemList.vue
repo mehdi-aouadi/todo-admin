@@ -1,6 +1,6 @@
 <template lang="pug">
   div.todo-item-list__container
-    el-table.todo-item-list(:data="tableData", row-class-name='todo-item-line')
+    el-table.todo-item-list(:data="items", row-class-name='todo-item-line')
       el-table-column(
         v-for="header, index in headers",
         :label="$t(header.label)",
@@ -17,23 +17,6 @@ export default {
     'headers',
     'items',
   ],
-  data() {
-    return {
-      tableData: [
-        {
-          name: 'First Program',
-          lastModificationDate: '10-10-2016',
-        }, {
-          name: 'Second Program',
-          lastModificationDate: '10-10-2016',
-        },
-      ],
-    };
-  },
-  computed: {
-  },
-  methods: {
-  },
 };
 </script>
 

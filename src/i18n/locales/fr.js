@@ -34,4 +34,8 @@ export default {
   'media name': 'Nom du media',
   'media type': 'Type du media',
   'media resource': 'Resource du media',
+  // ITEM LIST
+  name: 'Nom',
+  lastModificationDate: 'Dernière date de modification',
+  creationDate: 'Date de création',
 };
