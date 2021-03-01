@@ -16,6 +16,11 @@ export default {
   dashboard: 'Tableau de board',
   cancel: 'Annuler',
   save: 'Save',
+  // LOGIN
+  'sign in text': 'Sign in to your todo account',
+  'sign in button': 'Connexion',
+  'new account': 'créez un nouveau compte',
+  or: 'ou bien',
   // PROGRAMS
   programs: 'Programmes',
   'programs dashboard': 'Tableau de board des programmes',

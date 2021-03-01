@@ -10,12 +10,17 @@ export default {
   'edit profile': 'Edit Profile',
   logout: 'Logout',
   login: 'Login',
+  email: 'Email',
   password: 'Password',
-  'sign in': 'Sign In',
   'sign up': 'Sign Up',
   dashboard: 'Dashboard',
   cancel: 'Cancel',
   save: 'Save',
+  // LOGIN
+  'sign in text': 'Sign in to your todo account',
+  'sign in button': 'Sign in',
+  'new account': 'create a new account',
+  or: 'or',
   // PROGRAMS
   programs: 'Programs',
   'programs dashboard': 'Programs Dashboard',
